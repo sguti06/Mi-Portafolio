@@ -1,35 +1,26 @@
 * {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
 }
-:root{
+
+:root {
     --primaryColor: rgb(94, 94, 216);
     --backgroundColor: rgb(23, 23, 54);
     --textColor: rgb(255, 255, 255);
     --tipography: 'Times New Roman', Times, serif;
 }
-/*     font-family: 'Times New Roman', Times, serif; */
-/* _____________________________________________________________________________________________________________ */
-body{
-    width: 100%vw;
-    height: auto;
-    box-sizing: border-box;
+
+body {
     background-color: var(--backgroundColor);
-    font-family: var(var(--tipography));
+    font-family: var(--tipography);
     overflow-x: hidden;
 }
 
-/* _____________________________________________________________________________________________________________ */
-/* --------------------------------------HEADER----------------------------------------------------------------- */
-
-header{
-    width: 100vw;
-    height: auto;
-    /* border: solid red; */
+/* Header */
+header {
+    width: 100%;
 }
-
-/* --------------------------------------------------MENU DE NAVEGACION------------------------------------------- */
 
 .container-navBar{
     width: 100vw;
@@ -47,63 +38,27 @@ header{
     gap: 70px;
 }
 
-#logo{
-    height: 2px;
-}
-
-/* ----------------------------------------------------------------MAIN----------------------------------------------- */
-
-.sobreMi{
-    width: 80vw;
-    margin: 30px auto;
-}
-
-.title{
-    color: var(--primaryColor);
-    font-size: 45px;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    font-weight: 800;
-}
-
-.subtitle{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    color: var(--textColor);
-}
-
-.sobreMi p{
-    color: var(--textColor);
-}
-
-.contextoPersonal p{
-    width: 80vw;
-    justify-content: center;
-    align-items: center;
-    margin: 110px;
-    font-size: 30px;
-    color: var(--textColor);
-}
-
-
-body {
-    background-color: #1e1e1e;
-    color: white;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-    /* Sección de proyectos */
-.misProyectos {
+/* Secciones */
+.sobreMi, .contextoPersonal, .misProyectos {
+    width: 90%; /* Cambiar a 90% para dispositivos más pequeños */
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 30px auto;
+    color: var(--textColor);
+}
+
+.title {
+    font-size: 2.5rem; /* Ajustar tamaño de fuente */
     text-align: center;
+    margin: 15px 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.contextoPersonal p {
+    font-size: 1.2rem; /* Cambiar tamaño de fuente para mejor legibilidad */
 }
 
 .misProyectos h2 {
@@ -125,7 +80,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Botones y enlaces */
 .misProyectos a {
     display: inline-block;
     padding: 10px 20px;
@@ -141,31 +95,17 @@ body {
     background-color: #e67e22;
 }
 
-@media (max-width: 768px) {
-    .misProyectos {
-        padding: 10px;
-    }
-
-    .misProyectos h2 {
-        font-size: 1.8rem;
-    }
-
-    .misProyectos h3 {
-        font-size: 1.3rem;
-    }
-
-    .misProyectos p {
-        font-size: 0.9rem;
-    }
+/* Footer */
+footer {
+    background-color: var(--primaryColor);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem; /* Ajustar tamaño de fuente */
 }
 
-
-/* --------------------------FOOTER-------------------------- */
-footer{
-    /* border: solid red; */
-    background-color: var(--primaryColor);
-    padding: 30px;
-    text-align: center;
-    font-size: 30px;
-    color: var(--textColor);
+/* Media Queries */
+@media (max-width: 768px){}
+    .navBar-list {
+        flex-direction: row; /* Mantener la dirección horizontal */
+        gap: 30px; /* Ajustar el espacio entre elementos */
 }
